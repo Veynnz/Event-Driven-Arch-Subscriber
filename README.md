@@ -18,3 +18,9 @@ This string is a common URI or connection string used to specify how to connect 
 ![Slow Simulation](images/four.png)
 
 The "Queued messages" chart displays a total of 25 messages. This is because I have executed the publisher program 5 separate times. Each execution of the publisher sends a batch of 5 UserCreatedEventMessage events to the RabbitMQ broker. As the subscriber fetches and processes these messages one by one, the 25 messages represent the accumulation of these published events that are currently waiting in the queue to be fetched.
+
+### Three Subscribers
+![Three Subscribers](images/five.png)
+
+With three subscribers being run simultaneously, the messages in the queue are fetched so much faster, since the workload is being distributed between the three. This resulted in a much better performance, therefore reducing the queue messages spike much faster.
+An idea to make a better performance would be to publish the messages in a batch, to allow the subscriber to fetch the data as soon as possible.
