@@ -4,6 +4,8 @@
 
 AMQP is a standard set of rules that allows different computer programs to send and receive messages reliably. It ensures that messages can be passed between systems in a structured way.
 
+------------------------------------
+
 2. What does `guest:guest@localhost:5672` mean?
 
 This string is a common URI or connection string used to specify how to connect to an AMQP broker.
